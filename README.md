@@ -1,1 +1,1 @@
-# ltp-javascript-specialist
+# Mark Burns Javascript Specialist Respository
