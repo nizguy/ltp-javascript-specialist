@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>window.onload function</title>
+		<script>
+			var clicks=0;
+			
+			window.onload = function()
+			{
+				console.log("window.onload run...");
+				
+				document.getElementById('myButton').addEventListener('click', respond);
+			}
+			function respond(e)
+			{
+				clicks++;
+				console.log("Button Pressed" + clicks + "times");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>The "Console" tool</h1>
+		<p>Open the "Developer Tools" and go to "Console" tab in this browser to see functions run.</p>
+		<button id="myButton">I Dare You To Click Me!</button>
+	</body>
+</html>

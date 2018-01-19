@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First Javascript Code</title>
+	</head>
+	<style>
+		#touchTarget
+		{
+			background-color: #990000;
+			color: white;
+			width: 200px;
+			height: 200px;
+			padding: 10px;
+		}
+	</style>
+	<script>
+		window.onload = function()
+		{
+			document.getElementById('touchTarget').addEventListener('click', respond);
+		}
+		function respond(e)
+		{
+			alert("What The F*$k - You woke me up!");
+			//document.getElementById('touchTarget').style.display = "none";
+			document.getElementById('touchTarget').style.width = "400px";
+		}
+			
+	</script>
+			
+	
+	<body>
+		<div id="touchTarget"><h1>Touch Me!</h1></div>
+	</body>
+</html>

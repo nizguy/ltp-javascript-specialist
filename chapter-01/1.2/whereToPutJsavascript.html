@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Javascript Code Placement</title>
+		<script src="where.js"></script>
+		<!-- <script>
+			window.onload=function(){
+			document.getElementById('headScriptButton').addEventListener('click', respond);
+			
+			
+			function respond(e)
+			{
+				alert("This response is using script tags inside the head tags of this html file!");
+			}
+		</script> -->
+			
+	</head>
+		
+	<body>
+		<h1>Three Places to Put Javascript!</h1>
+		
+		<!--<h2>This button is controlled by placing JS between the head tags inside of script tags.</h2>
+		<button id="headScriptButton">I Dare You To Click Me!</button> -->
+		<h2>This button is controlled by creating the script  in its own separate file.</h2>
+		<button id="separateScriptButton">I Dare You To Click Me!</button>
+		<h2>This button is controlled by placing JS in the button tag. This is called in-line and is old school and not recommended due to it not keeping HTML docs separate from other code.</h2>
+		<button onclick="alert('This alert is driven by inserting JS code inline in an html tag!');">I Dare You To Click Me!</button>
+	</body>
+</html>

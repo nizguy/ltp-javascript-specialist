@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>getElementById</title>
+		<script>
+			window.onload=function()
+			{
+				document.getElementById('content').addEventListener('click', respond);
+				document.getElementById('one').addEventListener('click', respondOne);
+				document.getElementById('two').addEventListener('click', respondTwo);
+			}
+			function respond(e)
+			{
+				console.log("You Clicked content");
+				//document.getElementById('content').innerHTML= "";
+				document.getElementById('content').style.color = "red";
+			}
+			function respondOne(e)
+			{
+				console.log("You Clicked content One sentence");
+			}
+						function respondTwo(e)
+			{
+				console.log("You Clicked content Two sentence");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>getElementById Exercise</h1>
+		<p>Open the "Developer Tools" and go to "Console" tab in this browser to see functions run.</p>
+		<div id="content">
+			<p id="one">This is sentence one.</p>
+			<p id="two">This is sentence two.</p>
+		</div>
+		<!-- <button id="myButton">I Dare You To Click Me!</button> -->
+	</body>
+</html>

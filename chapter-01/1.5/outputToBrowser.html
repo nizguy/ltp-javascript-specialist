@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Output To Browser</title>
+		<script>
+			//document.write("Hello!!!");
+			window.onload = function()
+			{
+				document.getElementById('myButton').addEventListener('click', respond);
+			}
+			function respond(e)
+			{
+				document.getElementById('one').innerHTML += "<h1>Welcome To Mark's Web Dev World!</h1>";
+				document.getElementById('two').innerHTML += "<p>Javascript Specialist Course!</p>";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Output To Browser Exersice</h1>
+		<p>Open the "Developer Tools" and go to "Elements" tab in this browser to see functions run.</p>
+		<div id="one">This div one.</div>
+		<div id="two">This is div two.</div>
+		<button id="myButton">I Dare You To Click Me!</button>
+	</body>
+</html>

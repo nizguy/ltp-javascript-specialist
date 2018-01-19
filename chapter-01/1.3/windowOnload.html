@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>window.onload function</title>
+		
+		<script>
+			window.onload = function()
+			{
+				//Initialization
+			document.getElementById('myButton').addEventListener('click', respond);
+			}
+			
+			window.onclick = function()
+			{
+				alert("Why did you click Me??");
+			}
+			function respond(e)
+			{
+				alert("Hi!  You Pressed Me and Woke Me the F%&k up!");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>window.onload function</h1>
+		
+		<button id="myButton">I Dare You To Click Me!</button>
+	</body>
+</html>
