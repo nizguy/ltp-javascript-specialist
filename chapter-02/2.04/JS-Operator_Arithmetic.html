@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operands and Artimetic in Javasciprt</title>
+		<script>
+			window.onload = function()
+			{
+			var operand1 = 1235;
+			var operand2 = 854.2;
+			var operand3 = 15;
+			var out = "";
+			
+			out += "Addition: " + (operand1 + operand2);
+			out += "<br/>Subtraction: " + (operand1 - operand2);
+			out += "<br/>Multiplcation: " + (operand1 * operand2);
+			out += "<br/>Division: " + (operand1 / operand2);
+			out += "<br/>Modulus (division remainder 10 % 3)= " + (10 % 3);
+			out += "<br/>Modulus (division remainder 11 % 3)= " + (11 % 3);
+			out += "<br/>Modulus (division remainder 12 % 3)= " + (12 % 3);
+			out += "<br/>Even (even # modulus by 2)= " + (12 % 2);
+			out += "<br/>Odd (odd # modulus 2)= " + (13 % 2);
+		//	out += "<br/>++:" + (operand3);
+			//	out += "<br/>++:" + (++operand3); //combination symbols - prefix fixed incriment: ++
+			//	out += "<br/>--:" + (operand3); //combination symbols
+			out += "<br/>++:" + (operand3++); //combination symbols - postfix incriment: ++
+			out += "<br/>++:" + (operand3); //combination symbols
+			out += "<br/>--:" + (--operand3); //combination symbols
+			out += "<br/>+=3 " + (operand3 += 3); //combination symbols
+			out += "<br/>-=3 " + (operand3 -= 3); //combination symbols
+			out += "<br/>*=3 " + (operand3 *= 3); //combination symbols
+							
+			document.getElementById('resultOne').innerHTML = out;
+			}
+		</script>
+		
+	</head>
+	<!-- <script src="??????????.js"></script> -->
+	<body>
+		<h1>Using Arithmetic and Math Operands In Javascript</h1>
+		<p>Note: Open the "Developer Tools" and go to "Console" tab in this browser to see functions run.</p>
+		<div id="resultOne">Javascipt is more fun than a Polar Bear Dip!</div>
+		
+	</body>
+</html>

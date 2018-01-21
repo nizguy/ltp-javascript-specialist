@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript Variables</title>
+		<script>
+			var age;  //Public or scipt scope
+		window.onload = function()
+		{
+			var score; //Declaration  (Function Scope)
+			score = 1000; //Initialize
+			
+			age = 42;  //Combined declaration and initialization - there is no difference between separate and combined just a personal preference
+			out();
+		}
+		function out()
+		{
+			//document.getElementById('resultOne').innerHTML = score;
+			document.getElementById('resultOne').innerHTML = "Age: " + age;
+		}
+		</script>
+		
+	</head>
+	<!-- <script src="??????????.js"></script> -->
+	<body>
+		<h1>Declaring and Initializing Variables</h1>
+		<p>Note: Open the "Developer Tools" and go to "Console" tab in this browser to see functions run.</p>
+		<div id="resultOne"></div>
+		
+	</body>
+</html>

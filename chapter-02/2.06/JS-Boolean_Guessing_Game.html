@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Booleans Guessing Game in Javascript</title>
+	<script>
+		var randomNumber;
+		
+		window.onload = function()
+		{
+			randomNumber = Math.floor((Math.random() *10) +1);
+			console.log(randomNumber);
+			document.getElementById('btnCheck').addEventListener('click', checkGuess);
+		}
+		function checkGuess(e)
+		{
+			var userGuess = document.getElementById('guess').value;
+			if(userGuess == randomNumber)
+			{
+				document.getElementById('resultOne').innerHTML = "<h1>Correct</h1>";
+			}	else
+			{
+				document.getElementById('resultOne').innerHTML = "<h1>Wrong</h1>";
+			}
+		}
+	</script>
+		
+	</head>
+	<!-- <script src="??????????.js"></script> -->
+	<body>
+		<h1>Guessing Game Using Boolean & Javascript</h1>
+		<label for="guess">Guess a Number Between 1 and 10:</label>
+		<input type="number" min="1" max="10" id="guess" />
+		<button id="btnCheck">Am I Right?</button>
+		<div id="resultOne"></div>
+		<br/> <br/>
+		<a href="https://www.w3schools.com/jsref/jsref_obj_boolean.asp" target="_blank">This is a link to w3schools Javascript Math Reference Library</a>
+		
+	
+		
+	</body>
+</html>
