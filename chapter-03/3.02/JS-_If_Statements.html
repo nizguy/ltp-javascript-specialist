@@ -1,0 +1,38 @@
+<!DOCUMENT html>
+<html>
+	<head>
+		<title>Javascript If Statements</title>
+		<link href="">
+		<script>
+		window.onload=function()
+		{
+			var age = 18;
+			var citzen = true;
+			
+			if(age >= 18 && citzen == true)
+			{
+				document.getElementById('result').innerHTML="<h2>You may leagally vote</h2>";
+			}
+			
+			var age2 = 15;
+			var parentPresent = true;
+			
+			if(age2 >= 17 || parentPresent == true)
+			   {
+			   		document.getElementById('result').innerHTML += "<p>You also may see the movie.</p>";
+			   }
+		}
+		</script>
+		<style>
+			h1{
+				text-align: center;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<h1>"If" Statements in Javascript</h1>
+		<div id="result"></div>
+	</body>
+</html>

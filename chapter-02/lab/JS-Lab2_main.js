@@ -1,7 +1,7 @@
 window.onload = function()
 	{
 		document.getElementById('addingButton').addEventListener('click', addNumbers);
-	document.getElementById('multiplyButton').addEventListener('click', multiplyNumbers);
+		document.getElementById('multiplyButton').addEventListener('click', multiplyNumbers);
 	}
 
 	function addNumbers(e)
@@ -17,7 +17,7 @@ window.onload = function()
 	{
 		var answerMultiply = "";
 		
-		answerMultiply += + document.getElementById('inputOneOne').value * document.getElementById('inputTwoTwo').value 
+		answerMultiply = + document.getElementById('inputOneOne').value * document.getElementById('inputTwoTwo').value 
 		
 		alert(answerMultiply)
 	}	

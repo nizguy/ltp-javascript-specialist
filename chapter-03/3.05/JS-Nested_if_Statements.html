@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nested If Statements</title>
+        <script>
+        window.onload=function()
+        {
+           document.getElementById('btnShow').addEventListener('click', determineGrade);
+        }
+		
+		function determineGrade(e)
+		{
+			var letterGrade;
+			var numericalGrade = document.getElementById('numberGrade').value;
+			if(numericalGrade > 0 && numericalGrade <101)
+			{
+				if(numericalGrade >= 90)
+					{
+						letterGrade = "A";
+					}
+				else if (numericalGrade >= 80)
+				{
+					letterGrade = "B";
+				}
+				else if (numericalGrade >= 70)
+				{
+					letterGrade = "C";
+				}
+				else if (numericalGrade >= 60)
+				{
+					letterGrade = "D";
+				}
+				else
+				{
+					letterGrade = "Failed";
+				}
+
+				document.getElementById('result').innerHTML = "<h1>" + letterGrade + "</h1>";
+			} else
+			{
+				document.getElementById('result').innerHTML = "<h1>Oops! Must be a number between 0 and 100</h1>";
+			}
+		}
+        
+        </script>
+    </head>
+    <body>
+		<label for="numberGrade"><h2>Input Your Numerical Grade Below:</h2></label>
+       <input type="number" min="0" max="100" id="numberGrade"/>
+		<button id="btnShow">Show Letter Grade</button>
+        <div id="result"></div>
+    </body>
+</html>

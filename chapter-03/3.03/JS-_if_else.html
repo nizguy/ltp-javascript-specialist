@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If...else</title>
+        <script>
+        window.onload=function()
+        {
+           citizen = true;
+           age = 58;
+            
+           if(citizen && age >=18)
+               {
+                   document.getElementById('result').innerHTML = "<h1>You are legally old enough to vote.</h1>";
+               } else
+               {
+                   document.getElementById('result').innerHTML = "<h1>You are too young to vote at this time.</h1>";
+               }
+        }
+        
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

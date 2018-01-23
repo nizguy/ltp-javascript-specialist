@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If...else</title>
+        <script>
+        window.onload=function()
+        {
+            document.getElementById('btnOne').addEventListener('click', btnClicked);
+            document.getElementById('btnTwo').addEventListener('click', btnClicked);
+        }
+        
+        function btnClicked(e)
+        {
+            //alert("You pressed a button, but we don't know which one.");
+            console.log(e.target.id);
+            if(e.target.id == "btnOne")
+                {
+                    alert("WhooHoo! You pushed Button One!");
+                } else
+                {
+                    alert("WhooHoo! You pushed Button Two!");
+                }
+        }
+        
+        </script>
+    </head>
+    <body>
+        <div id="result">
+        <button id="btnOne">One</button>
+        <button id="btnTwo">Two</button>
+        </div>
+    </body>
+</html>
