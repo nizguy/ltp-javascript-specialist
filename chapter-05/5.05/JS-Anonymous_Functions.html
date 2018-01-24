@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Anonymous Functions</title>
+		<script>
+			var btnPress;
+			
+			window.onload = function()
+			{
+				alert("window.onload!");
+				btnPress = document.getElementById('myButton');
+				btnPress.onmouseover = function()
+				//btnPress.onclick = function()
+				{
+					alert("Thanks for tickling my button!");
+				}
+			}
+			
+			
+			
+							
+			/*	var sum = addThese(x,y);
+				document.getElementById('result').innerHTML = sum;
+				document.getElementById('result').innerHTML += "<br/>" + subtractThese(x,y);
+				document.getElementById('result').innerHTML += "<br/>" + multiplyThese(x,y);
+				document.getElementById('result').innerHTML += "<br/>" + subtractThese(100,50);
+			*/
+		</script>
+	</head>
+    <body>
+		<h1>Anonymous Functions In Javascript</h1>
+		<div id="result"></div><br/>
+		<button id="myButton">Press Me!</button>
+		
+	</body>
+</html>
