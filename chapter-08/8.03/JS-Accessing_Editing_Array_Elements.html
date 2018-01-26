@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript - Declaring Arrays</title>
+	<script>
+		window.onload=function()
+		{
+			var teams = ["Yankees", "Mets", "Giants", "Jets", "Knicks", "Nets", "Rangers", "Islanders"];
+			console.log(teams);
+			
+			var computers = new Array("Compaq", "Macintosh", "TI994A", "TRS-80", "Apple ][", "Comodore 64", "Osborn Pro");
+				console.log(computers);
+			
+			family = []; 
+				
+			document.getElementById('result').innerHTML = computers[3];
+			document.getElementById('result').innerHTML += "<br/>" + teams[0];
+			document.getElementById('result').innerHTML += "<br/>" + family[0];
+			
+			family[0] = "Mark";
+			family[1] = "Cecil";
+			family[2] = "Debbie";
+			family[3] = "David";
+			computers[3] = "Amiga";
+			
+			document.getElementById('result').innerHTML += "<br/>" + family[3];
+			document.getElementById('result').innerHTML += "<br/>" + computers[3];
+		}
+	</script>
+</head>
+<!-- <script src="JS-Lab_7_main.js"></script> -->
+
+<body>
+	<h1>Declaring Arrays In Javascipt</h1>
+	<!-- <button id="confirmBtn">Click Me & See What Happens!</button> -->
+	<!-- <p id="text"></p> -->
+	<div id="result"></div>
+	
+</body>
+
+</html>

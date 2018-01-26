@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript - Array Functions</title>
+	<script>
+		window.onload=function()
+		{
+			years = [1999,2000,2001,2002,2003,2004,2005,2006,2007,2008];
+			years.push(2009);
+			years.push(2010);
+			years.pop();
+			years.forEach(myFunction);
+			console.log(years.indexOf(2010));
+			
+			names = ["Fred", "Tom", "Mark", "Adam", "Brett"];
+			console.log(names.sort());
+			
+			//document.getElementById('result').innerHTML+=out;
+		}
+		
+		function myFunction(item, index)
+		{
+			document.getElementById('result').innerHTML += index + "|" + item + "<br/>";
+		}
+		
+		
+	</script>
+</head>
+<!-- <script src="JS-Lab_7_main.js"></script> -->
+
+<body>
+	<h1>Array Functions In Javascipt</h1>
+	<!-- <button id="confirmBtn">Click Me & See What Happens!</button> -->
+	<!-- <p id="text"></p> -->
+	<div id="result"></div>
+	
+</body>
+
+</html>

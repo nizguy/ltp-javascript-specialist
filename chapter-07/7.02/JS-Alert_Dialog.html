@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript Alert Dialogs</title>
+	<script>
+		window.onload=function()
+		{
+			//alert("Welcome To Alert Dialogs in Javascript");
+			document.getElementById('myBtn').addEventListener('click', alertUser);
+		}
+		
+		function alertUser(e)
+		{
+			//alert("Button Pressed");
+			alert(e.target.id);
+		}
+	</script>
+
+</head>
+<!-- <script src="JS-Lab_6_main.js"></script> -->
+
+<body>
+	<h1>Javascipt Aleret Dialog Box</h1>
+	<button id="myBtn">I Dare You To Click Me!</button>
+	
+</body>
+
+</html>

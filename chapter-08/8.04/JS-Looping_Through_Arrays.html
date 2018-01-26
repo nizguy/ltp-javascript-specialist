@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript - Looping Through Arrays</title>
+	<script>
+		window.onload=function()
+		{
+			var cars = ["Toyota", "MR2", "Supra", "Celica", "Corolla", "Camry", "Corona"];
+			//console.log(cars.length);
+			var ticks = cars.length;
+			var x = 0;
+			var out="";
+			while(x < ticks)
+			{
+				out += cars[x];
+				out += "<br/>";
+				x++;
+			}
+			document.getElementById('result').innerHTML=out;
+			
+			var cities = ["Toronto", "Ottawa", "Montreal", "Calgary", "Edmonton", "Halifax", "Vancouver", "Victoria"];
+		
+			for(var z=0; z< cities.length; z++)
+			{
+				out+= cities[z];
+				out+= "<br/>";
+			}
+			document.getElementById('result').innerHTML+=out;
+		}
+	</script>
+</head>
+<!-- <script src="JS-Lab_7_main.js"></script> -->
+
+<body>
+	<h1>Looping Through Arrays In Javascipt</h1>
+	<!-- <button id="confirmBtn">Click Me & See What Happens!</button> -->
+	<!-- <p id="text"></p> -->
+	<div id="result"></div>
+	
+</body>
+
+</html>
