@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Strings 9.4</title>
+		<script>
+			window.onload=function()
+			{
+				var myString = "If you are strong enough, there are no precedents.";
+				var newString = myString.slice(0,15);
+				console.log(newString);
+				
+//				document.getElementById('result').innerHTML = myString + newString;
+				
+				var csv = "Mark,Brett,Joan,Kerri,Rick,Connor,Colleen";
+				var familyArray = csv.split(",");
+				console.log(familyArray);
+				for(var x =0;x < familyArray.length; x++)
+				{
+					document.getElementById('result').innerHTML += familyArray[x] + "<br/>";
+				}
+				
+				var theString="Pink Flyod is the Greatest Band";
+				console.log(theString.substr(0,4));
+				
+			}
+		</script>
+	</head>
+    <body>
+		<h1>Javascript Strings - slice(), split() and substr()</h1>
+		<div id="result"></div>
+	</body>
+</html>

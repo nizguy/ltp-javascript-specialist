@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Strings 9.3</title>
+		<script>
+			window.onload=function()
+			{
+				var myString = "Four score and seven years ago.";
+				var n = myString.search("seven");
+				console.log(n);
+				
+//				document.getElementById('result').innerHTML = myString;
+				
+				var newString = myString.replace("Four", "Six");
+				console.log(newString);
+				
+				document.getElementById('result').innerHTML = myString + newString;
+			}
+		</script>
+	</head>
+    <body>
+		<h1>Javascript Strings - search() and replace()</h1>
+		<div id="result"></div>
+	</body>
+</html>

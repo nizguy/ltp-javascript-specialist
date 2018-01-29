@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Setting Custom Date</title>
+		<script>
+		window.onload=function()
+		{
+			//Yesterdays Date
+			var d = new Date(2018,0,29,12,23);
+/*			var out = "";
+			out += "Day of Month: " + d.getDate();
+			out += "<br/>Year: " + d.getFullYear();
+			out += "<br/>Time: " + d.getHours() + ":" + d.getMinutes();
+			document.getElementById('result').innerHTML = out;
+*/
+			document.getElementById('result').innerHTML = d;
+}
+		</script>
+	</head>
+<!-- <script src="JS-Lab_10_main.js"></script> -->
+    <body>
+		<h1>Javascript - Custom Date and Time.</h1>
+		<div id="result"></div>
+	</body>
+</html>

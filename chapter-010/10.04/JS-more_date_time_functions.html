@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Dates More Functions</title>
+		<script>
+		window.onload=function()
+		{
+			var d = new Date();
+			d.setFullYear(2020);
+			d.setHours(18);
+			document.getElementById('result').innerHTML = d.toLocaleDateString();
+			//document.getElementById('result').innerHTML = d.toJSON();
+			/*var out = "";
+			out += "Day of Month: " + d.getDate();
+			out += "<br/>Year: " + d.getFullYear();
+			out += "<br/>Time: " + d.getHours() + ":" + d.getMinutes();
+			document.getElementById('result').innerHTML = out; */
+		}
+		</script>
+	</head>
+<!-- <script src="JS-Lab_10_main.js"></script> -->
+    <body>
+		<h1>Javascript - Current Date and Time.</h1>
+		<div id="result"></div>
+	</body>
+</html>
