@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - DOM (Document Object Model)</title>
+        
+		<script>
+		window.onload=function()
+		{
+			var theList = document.getElementById('myList');
+			var node = document.createElement("LI");
+			var text = document.createTextNode("Yes");
+			node.appendChild(text);
+			//console.log(node);
+			theList.appendChild(node);
+			
+			var node2 = document.createElement("LI");
+			var text2 = document.createTextNode("Pink Floyd");
+			node2.appendChild(text2);
+			theList.appendChild(node2);
+			
+			theList.removeChild(theList.childNodes[1]);
+			//console.log(theList);
+		}
+		</script>
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>Adding & Deleting DOM Elements</h1>
+		<ul id="myList">
+		<li>Led Zepplin</li>
+		<li>Rush</li>
+		</ul>
+	<!-- <button id="btn???">Text For Buton</button> -->
+	<!-- <div id="result">Text For Results Div or no Text</div> -->
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - DOM (Document Object Model)</title>
+        
+		<script>
+		window.onload=function()
+		{
+			var results = document.getElementById('result');
+			var elements = document.getElementsByTagName('p');
+			var x = document.getElementsByClassName('last');
+			//result.innerHTML = result;
+			result.innerHTML = elements;
+			console.log(elements);
+			console.log(elements[1]);
+			console.log(x[0]);
+		}
+		</script>
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>Locating DOM Elements</h1>
+		<p>This is a node.</p>
+		<p>This is a another node.</p>
+		<p class="last">This is a third node.</p>
+		<div id="result"></div>
+	</body>
+</html>

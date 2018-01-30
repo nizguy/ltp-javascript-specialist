@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - DOM (Document Object Model)</title>
+        <style>
+        	.blue
+			{
+				color: blue;
+				font-weight: bold;
+			}
+			
+			.red
+			{
+				color: red;
+				font-weight: normal;
+				text-decoration: overline;
+			}
+		</style>
+		<script>
+		window.onload=function()
+		{
+			var content = document.getElementById('main');
+			//content.setAttribute('class', 'red');
+			content.style.backgroundColor = "yellow";
+			content.style.fontWeight = "bold";
+			content.style.borderBottom = "6px solid black";
+			/*	document.getElementById('main').innerHTML += "<p>This elelment was added dynamically!</p>"
+			console.log(document.getElementById('main')); */
+		}
+		</script>
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>Changing DOM Elements</h1>
+		<div id="main">
+		<p>Manipultating the DOM is fun!</p>
+		<p>Javascript can be used to maniplulate the DOM.</p>
+		</div>
+	<!-- <button id="btn???">Text For Buton</button> -->
+	<!-- <div id="result">Text For Results Div or no Text</div> -->
+	</body>
+</html>
