@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Regular Expressions</title>
+	<!-- <style>Place Short CSS code here</style> -->
+	<!-- <link rel="stylesheet" href="Place URL to CSS file Here" /> -->
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>Understanding Regular Expressions</h1>
+		<p>
+			<strong>/pattern/modifier</strong> - so forward slash then "pattern" then forward slash then "modifier <br/>
+			basic format for JS Regular Expression:<br/>
+			var pattern = /this is the pattern/this is the modifier;<br/>
+			examples of simple regular expressions:<br/>
+			var pattern = /regular expressions/i;  (the "i" is for "case insensitive match)<br/>
+			var globalMatchPattern = regular expressions/g;  (the "g" is for global match)<br/>
+			[abc]   would find ---> a,b,c<br/>
+			[0-9]   would find ---> 0,1,2,3,4,5,6,7,8,9<br/>
+			(ab|xy) would find ---> Any alternative separated by the "pipe" symbol | (ab or xy )<br/>
+		</p>
+		
+		<p>The first alert box that pops up is a search for "x" in this text - "I marked the paper with an x."<br/>
+		By clicking OK you got  a second alert box that checks the same text for "with an e".<br/>
+		</p>
+		<h3>Note: Check the source code for the JS script</h3>
+	<!-- <button id="btn???">Text For Buton</button> -->
+	<!-- <div id="result">Text For Results Div or no Text</div> -->
+	<script>
+			//First alert returns "true"
+			var pattern = /x/;
+			alert(pattern.test("I marked the paper with an x."));
+			//second alert returns "false"
+			var pattern = /with an e/;
+			alert(pattern.test("I marked the paper with an x."));
+		</script>
+	</body>
+</html>

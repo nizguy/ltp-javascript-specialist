@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Javascript - Regular Expressions - Search and Replace</title>
+	<!-- <style>Place Short CSS code here</style> -->
+	<!-- <link rel="stylesheet" href="Place URL to CSS file Here" /> -->
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>Javascript - RegEx - Search & Replace</h1>
+		<h2>We will be using the standard phrase:<br/> "The quick brown fox jumped over the lazy dogs."<br/>
+		And change a phone number "555.555.4321" with dot separations to dash.</h2>
+		<h3>Note: Check the source code for the JS script</h3>
+	<!-- <button id="btn???">Text For Buton</button> -->
+	<!-- <div id="result">Text For Results Div or no Text</div> -->
+	<script>
+			//first alert returns "true"
+			var myString = "The quick brown fox jumped over the lazy dogs."
+			console.log(myString.search(/[fox]/i));
+			var searchFor = prompt("What would you like to searh for?");
+			var searchPattern = "/" + searchFor + "/i";
+			console.log(myString.search(/The/i));
+	
+		var number="555.555.4321";
+		number = number.replace(/[.]/g, "-");
+		console.log(number);
+		
+	</script>
+	</body>
+</html>

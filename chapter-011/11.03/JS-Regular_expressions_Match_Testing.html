@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - Regular Expressions - Match Testing</title>
+	<!-- <style>Place Short CSS code here</style> -->
+	<!-- <link rel="stylesheet" href="Place URL to CSS file Here" /> -->
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>Javascript - Regular Expressions - Testing For Matches</h1>
+		<p>
+			<strong>/pattern/modifier</strong> - so forward slash then "pattern" then forward slash then "modifier"<br/>
+			basic format for JS Regular Expression:<br/>
+			var pattern = /this is the pattern/this is the modifier;<br/>
+			examples of simple regular expressions:<br/>
+			var pattern = /regular expressions/i;  (the "i" is for "case insensitive match)<br/>
+			var globalMatchPattern = regular expressions/g;  (the "g" is for global match)<br/>
+			[abc]   would find ---> a,b,c<br/>
+			[0-9]   would find ---> 0,1,2,3,4,5,6,7,8,9<br/>
+			(ab|xy) would find ---> Any alternative separated by the "pipe" symbol | (ab or xy)<br/>
+		</p>
+		
+		<p>The first alert box that pops up is a search for ".tv" in this text - "LearnToProgram.tv" which returns a "true"<br/>
+		By clicking OK you got a second alert box that checks "LearnToProgram.biz" for ".tv or .com". and returns a "false"<br/>
+		By clicking OK on the second alert box that checks "LearnToProgram.tv 1" for "0,1,2,3,4,5,6,7,8,9". and returns a "true"<br/>
+		By clicking OK on the third alert box that checks "LearnToProgram.tv 1" for numbers "2-9". and returns a "false"<br/>
+		By clicking OK on the fourth alert box that checks "LearnToProgram.tv" for a capital "A". and returns a "false"<br/>
+		By clicking OK on the fifth alert box that checks "LearnToProgram.tv" for case insensative "A". and returns a "true"<br/>
+		</p>
+		<h3>Note: Check the source code for the JS script</h3>
+	<!-- <button id="btn???">Text For Buton</button> -->
+	<!-- <div id="result">Text For Results Div or no Text</div> -->
+	<script>
+			//first alert returns "true"
+			var pattern = /.tv/;
+			alert(pattern.test("LearnToProgram.tv"));
+			//second alert returns "false"
+			var pattern = /(.tv|.com)/;
+			alert(pattern.test("LearnToProgram.biz"));
+			//third alert returns "true"
+			var pattern = /[0123456789]/;
+			alert(pattern.test("LearnToProgram.tv 1"));
+			//fourth alert returns "false"
+			var pattern = /[2-9]/;
+			alert(pattern.test("LearnToProgram.tv 1"));
+			//fifth alert returns "false"
+			var pattern = /[A]/;
+			alert(pattern.test("LearnToProgram.tv"));
+			//sixth alert returns "true"
+			var pattern = /[A]/i;
+			alert(pattern.test("LearnToProgram.tv"));
+		</script>
+	</body>
+</html>
