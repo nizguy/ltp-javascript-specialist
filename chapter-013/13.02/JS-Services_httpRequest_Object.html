@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript- Request Service</title>
+		<script>
+		var xmlhttp;
+			
+		window.onload=function()
+		{
+			xmlhttp = new XMLHttpRequest();
+			document.getElementById('btnGetInfo').addEventListener('click', getService);
+		}
+		
+		function getService(e)
+			{
+				var address = document.getElementById('address').value;
+				
+				var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&sensor=false";
+				 console.log(url);
+				xmlhttp.open("GET", url, true);
+				xmlhttp.send();
+			}
+		</script>
+	<!-- <style>Place Short CSS code here</style> -->
+	<!-- <link rel="stylesheet" href="Place URL to CSS file Here" /> -->
+        
+    </head>
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+		<h1>xmlHttpRequest() Object</h1>
+		<label for="address">Address:</label>
+		<input type="text" id="address" placeholder="Street City State" /> <br/>
+		<button id="btnGetInfo">Get Address Info</button>
+		<div id="result"></div>
+	</body>
+</html>
