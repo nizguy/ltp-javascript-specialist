@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript- JSON Execises</title>
+        <script src="key.js"></script>
+		<script>
+		var	xlmhttp;
+		window.onload=function()
+		{
+			navigator.geolocation.getCurrentPosition(success, fail);
+		}
+		
+		function success(position)
+		{
+			var lat = position.coords.latitude;
+			var long = position.coords.longitude;
+			getPositionInfo(lat,long);
+		}
+			
+		function getPositionInfo(lat,long)
+			{
+				var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long;
+				url += "&radius=20000&types=food&key=" + key;
+				xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = processPlaces;
+				xmlhttp.open("GET", url, true);
+				xmlhttp.send();
+			}
+		function processPlaces()
+			{
+				var out="";
+				if(xmlhttp.readyState==4)
+				{
+					var jsonResponse = JSON.parse(xmlhttp.responseText);
+					var places = jsonResponse.results;
+					console.log(places);
+					for (var x=0; x < places.length; x++)
+					{
+						var name = places[x].name;
+						var address = places[x].vicinity;
+						var rating = places[x].rating;
+						out += "<h2>" + name + "</h2><p>" + address + "<br/>";
+						out += "Rating: " + rating + "</p>";
+					}
+					document.getElementById('result').innerHTML = out;
+						
+				//	console.log(xmlhttp.responseText);
+				//	console.log(jsonResponse.results);
+				}
+			}
+			function fail(e)
+			{
+				alert(e.message);
+			}
+			
+		</script>
+    </head>
+    <!-- <script src="JS-Lab_13_main.js"></script> -->
+    <body>
+		<h1>Javascript - Parsing JSON Content</h1>
+		<h2>Local Food</h2>
+		<div id="result"></div>
+	<!--	<h2>Using the XMLHttpRequest object</h2>
+		<p id="demo">This text will change.</p>
+		<button id="httpButton">Change Text Message</button> -->
+	</body>
+</html>

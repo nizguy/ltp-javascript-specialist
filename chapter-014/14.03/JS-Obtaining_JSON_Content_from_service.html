@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript- JSON Execises</title>
+        <script src="key.js"></script>
+		<script>
+		var	xlmhttp;
+		window.onload=function()
+		{
+			navigator.geolocation.getCurrentPosition(success, fail);
+		}
+		
+		function success(position)
+		{
+			var lat = position.coords.latitude;
+			var long = position.coords.longitude;
+			getPositionInfo(lat,long);
+		}
+			
+		function getPositionInfo(lat,long)
+			{
+				var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long;
+				url += "&radius=20000&types=food&key=" + key;
+				xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = processPlaces;
+				xmlhttp.open("GET", url, true);
+				xmlhttp.send();
+			}
+		function processPlaces()
+			{
+				if(xmlhttp.readyState==4)
+				{
+					var jsonResponse = JSON.parse(xmlhttp.responseText);
+					console.log(jsonResponse);
+				}
+			}
+			function fail(e)
+			{
+				alert(e.message);
+			}
+			
+		</script>
+    </head>
+    <!-- <script src="JS-Lab_13_main.js"></script> -->
+    <body>
+		<h1>Javascript - Obtaining JSON From A Service</h1>
+	<!--	<h2>Using the XMLHttpRequest object</h2>
+		<p id="demo">This text will change.</p>
+		<button id="httpButton">Change Text Message</button> -->
+	</body>
+</html>
