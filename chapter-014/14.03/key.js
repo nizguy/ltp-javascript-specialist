@@ -1,1 +1,1 @@
-var key = "AIzaSyBgEDjBb9tG6ogNxQlrT2D6xMHGoRdK0-k"
+var key = "I removed my API key fropm this file as it is public repository."
