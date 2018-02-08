@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fruit Consumer</title>
+        <script src="JS-Fruit.js"></script>
+	<script>
+			window.onload=function()
+			{
+				//var apple = new Fruit("Apple", "red", 500);
+				pear = new Fruit("Pair", "green", 600);
+				document.getElementById('btnBite').addEventListener('click', bite);
+				
+			//	document.getElementById('result').innerHTML = apple.takeABite();
+			}
+			
+			function bite()
+			{
+				document.getElementById('result').innerHTML = "Bite Taken. " + pear.name + " now weights: " + pear.takeABite()
+			}
+		</script>
+		
+        
+    </head>
+    
+    <!-- <script src="JS script URL Here"></script> -->
+    <body>
+    <h1>Fruit Consumer</h1>
+		<div id="result"></div>
+		<button id="btnBite">Bite</button>
+		
+	
+	</body>
+</html>

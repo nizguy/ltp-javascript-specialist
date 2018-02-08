@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Objects</title>
+		<h1>Javascript - Custom Objects</h1>
+		<div id="result"></div>
+				
+    </head>
+    
+    <!-- <script src="JS-Lab_15_main.js"></script> -->
+    <body>
+	
+		<script>
+			var team = new Object();
+			team.name = "Bad News Bears";
+			team.wins = 100;
+			team.losses = 25;
+			team.captain = "Derek Jeter";
+			
+			window.onload=Function()
+			{
+				document.getElementById('result').innerHTML = "<h3>" + team.name + "</h3>";
+				document.getElementById('result').innerHTML += "<h3>" + team.wins + "</h3>";
+				document.getElementById('result').innerHTML += "<h3>" + team.losses + "</h3>";
+				document.getElementById('result').innerHTML += "<h3>" + team.captain + "</h3>";
+			}
+			
+			function employee(ssn, name, salary)
+			{
+				this.socialNumber = ssn;
+				this.fullName = name;
+				this.pay = salary;
+				
+			}
+			
+		</script>
+		<script>
+			var mark = new employee("000-00-01", "Mark Burns", 50000);
+			var bubba = new employee("000-00-01", "Bubba Luis", 500000);
+			
+			alert(mark.fullName);
+			alert(bubba.fullName);
+		</script>	
+	<!--	<button id="getLocationBtn">Get Your Location</button> -->
+	<!--	<p id="mapsLink"></p> -->	
+	
+	</body>
+</html>
